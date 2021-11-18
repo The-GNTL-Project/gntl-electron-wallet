@@ -1,4 +1,4 @@
-name: Gntl Electron Wallet Build
+name: GNTL Electron Wallet Build
 on:
     push:
         branches:
