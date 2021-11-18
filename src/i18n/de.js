@@ -231,7 +231,7 @@ export default {
         wallet: "Wallet"
     },
     menuItems: {
-        about: "Über Arqma Wallet",
+        about: "Über Gntl Wallet",
         changePassword: "Passwort ändern",
         copyAddress: "Adresse kopieren",
         copyQR: "QR Code kopieren",
@@ -244,7 +244,7 @@ export default {
         deleteWallet: "Wallet löschen",
         exportWallet: "Export Brieftasche",
         exportTransactions: "Transaktionen exportieren",
-        exit: "Arqma Wallet schließen",
+        exit: "Gntl Wallet schließen",
         importOldGUIWallet: "Wallets von alter GUI importieren",
         manageKeyImages: "Key Images verwalten",
         openWallet: "Wallet öffnen",
@@ -331,7 +331,7 @@ export default {
         warnings: {
             noKeyImageExport: "Keine Key Images zum Exportieren gefunden",
             usingLocalNode: "Zugang zur Remote Node nicht möglich, wechsle zur lokalen Node",
-            usingRemoteNode: "larqmad nicht gefunden, benutze eine Remote Node"
+            usingRemoteNode: "lgntld nicht gefunden, benutze eine Remote Node"
         }
     },
     placeholders: {
@@ -416,10 +416,10 @@ export default {
         getStarted: "Um zu loszulegen, wähle aus den folgenden Möglichkeiten aus:",
         loading: "Beladung...",
         loadingSettings: "Einstellungen werden geladen",
-        arqmaBalance: "Guthaben",
-        arqmaExchangeBalance: "Guthaben",
-        arqmaUnlockedBalance: "frei verfügbares Guthaben",
-        arqmaUnlockedShort: "frei verfügbar",
+        gntlBalance: "Guthaben",
+        gntlExchangeBalance: "Guthaben",
+        gntlUnlockedBalance: "frei verfügbares Guthaben",
+        gntlUnlockedShort: "frei verfügbar",
         noTransactionsFound: "Keine Transaktionen gefunden",
         notes: "Notizen",
         numberOfUnspentOutputs: "Anzahl der unspent outputs",
@@ -520,7 +520,7 @@ export default {
         versionDaemon: "Daemon-Version",
         versionWallet: "Wallet-Version",
         welcome: "Willkommen",
-        welcomeNoWallet: "Willkommen bei deiner Arqma Electron Wallet",
+        welcomeNoWallet: "Willkommen bei deiner Gntl Electron Wallet",
         yourWallets: "Deine Wallets"
     },
     headers: {

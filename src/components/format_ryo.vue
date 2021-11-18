@@ -1,6 +1,6 @@
 <template>
 <span>
-    {{ value }} ARQ
+    {{ value }} GNTL
 </span>
 </template>
 

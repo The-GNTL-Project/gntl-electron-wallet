@@ -244,7 +244,7 @@ export default {
         deleteWallet: "حذف المحفظة",
         exportTransactions: "معاملات التصدير ",
         exportWallet: "تصدير المحفظة",
-        exit: " محفظة  الخروج من Arqma GUI Wallet",
+        exit: " محفظة  الخروج من Gntl GUI Wallet",
         importOldGUIWallet: "استيراد محافظ من واجهة المستخدم الرسومية القديمة ",
         manageKeyImages: "إدارة الصورة الرئيسية ",
         openWallet: "افتح المحفظة",
@@ -331,7 +331,7 @@ export default {
         warnings: {
             noKeyImageExport: "لم يتم العثور على صور رئيسية للتصدير",
             usingLocalNode: "تعذر الوصول إلى العقدة البعيدة ، التبديل إلى المحلية فقط",
-            usingRemoteNode: "arqmad غير موجود ، باستخدام عقدة بعيدة"
+            usingRemoteNode: "gntld غير موجود ، باستخدام عقدة بعيدة"
         }
     },
     placeholders: {
@@ -416,10 +416,10 @@ export default {
         getStarted: "للبدء ، حدد أحد الخيارات أدناه: ",
         loading: "جار التحميل...",
         loadingSettings: "إعدادات التحميل",
-        arqmaBalance: "رصيد",
-        arqmaExchangeBalance: "رصيد",
-        arqmaUnlockedBalance: "رصيد مفتوح ",
-        arqmaUnlockedShort: "مفتوحة",
+        gntlBalance: "رصيد",
+        gntlExchangeBalance: "رصيد",
+        gntlUnlockedBalance: "رصيد مفتوح ",
+        gntlUnlockedShort: "مفتوحة",
         noTransactionsFound: "لم يتم العثور على معاملات",
         notes: "ملاحظات",
         numberOfUnspentOutputs: "عدد المخرجات غير المنفقة",
@@ -520,7 +520,7 @@ export default {
         versionDaemon: "إصدار Daemon",
         versionWallet: "نسخة المحفظة ",
         welcome: "مرحبا ",
-        welcomeNoWallet: "مرحبا بكم في Arqma Electron Wallet ",
+        welcomeNoWallet: "مرحبا بكم في Gntl Electron Wallet ",
         yourWallets: "محافظك"
     },
     headers: {

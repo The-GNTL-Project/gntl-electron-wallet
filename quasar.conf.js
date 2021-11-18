@@ -207,11 +207,11 @@ module.exports = function (ctx) {
             builder: {
                 // https://www.electron.build/configuration/configuration
 
-                appId: "com.arqma.electron-wallet",
-                productName: "Arqma Electron Wallet",
-                copyright: "Copyright © 2018-2020 Arqma Project, 2018-2020 Ryo/Loki Currency Project",
+                appId: "com.gntl.electron-wallet",
+                productName: "Gntl Electron Wallet",
+                copyright: "Copyright © 2018-2020 Gntl Project, 2018-2020 Ryo/Loki Currency Project",
                 afterSign: "build/notarize.js",
-                artifactName: "arqma-electron-wallet-${version}-${os}.${ext}",
+                artifactName: "gntl-electron-wallet-${version}-${os}.${ext}",
 
                 // directories: {
                 //     buildResources: "src-electron/build"
@@ -241,7 +241,7 @@ module.exports = function (ctx) {
                 },
 
 //                dmg: {
-//                    background: "src-electron/build/arqma-dmg.tiff",
+//                    background: "src-electron/build/gntl-dmg.tiff",
 //                    sign: false
 //                },
 

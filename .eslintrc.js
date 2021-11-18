@@ -51,6 +51,6 @@ module.exports = {
 
 
         "new-cap": ["error", { "newIsCap": false }],
-        "no-undef": ["error", { "__arqma_bin": false }] 
+        "no-undef": ["error", { "__gntl_bin": false }] 
     }
 }

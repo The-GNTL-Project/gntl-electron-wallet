@@ -244,7 +244,7 @@ export default {
         deleteWallet: "Supprimer le portefeuille",
         exportWallet: "Portefeuille d'exportation",
         exportTransactions: "Transactions d'exportation",
-        exit: "Quitter le portefeuille Arqma GUI",
+        exit: "Quitter le portefeuille Gntl GUI",
         importOldGUIWallet: "Importer le portefeuille depuis l’ancien GUI",
         manageKeyImages: "Gérer les images clés",
         openWallet: "Ouvrir le portefeuille",
@@ -329,7 +329,7 @@ export default {
         warnings: {
             noKeyImageExport: "Aucune clé image n'a été trouvé pour l'export",
             usingLocalNode: "Impossible d'accéder au nœud distant, basculement en local uniquement",
-            usingRemoteNode: "arqmad introuvable, utilisation du nœud distant"
+            usingRemoteNode: "gntld introuvable, utilisation du nœud distant"
         }
     },
     placeholders: {
@@ -406,10 +406,10 @@ export default {
         editAddressBookEntry: "Modifiez l'entrée du carnet d'adresses",
         loading: "Chargement...",
         loadingSettings: "Chargement des réglages",
-        arqmaBalance: "Solde",
-        arqmaExchangeBalance: "Solde",
-        arqmaUnlockedBalance: "Solde débloqué",
-        arqmaUnlockedShort: "Débloqué",
+        gntlBalance: "Solde",
+        gntlExchangeBalance: "Solde",
+        gntlUnlockedBalance: "Solde débloqué",
+        gntlUnlockedShort: "Débloqué",
         noTransactionsFound: "Aucune transaction trouvée",
         notes: "Notes",
         numberOfUnspentOutputs: "Nombre de sorties non dépensées",

@@ -37,23 +37,23 @@
     <q-modal minimized ref="aboutModal">
         <div class="about-modal">
 
-            <img class="q-mb-md" src="statics/arqma.svg" height="42" />
+            <img class="q-mb-md" src="statics/gntl.svg" height="42" />
 
             <p class="q-my-sm">{{ $t("titles.versionWallet") }}: v{{ version }}</p>
             <p class="q-my-sm">{{ $t("titles.versionDaemon") }}: v{{ daemonVersion }}</p>
-            <p class="q-my-sm">Copyright (c) 2018-2020, ArQmA Project</p>
+            <p class="q-my-sm">Copyright (c) 2020-2021, GNTL Project</p>
+            <p class="q-my-sm">Copyright (c) 2018-2021, ArQmA Project</p>
             <p class="q-my-sm">Copyright (c) 2018-2020, Ryo Currency Project</p>
             <p class="q-my-sm">All rights reserved.</p>
 
             <div class="q-mt-md q-mb-lg external-links">
                 <p>
-                    <a @click="openExternal('https://arqma.com/')" href="#">https://arqma.com/</a>
+                    <a @click="openExternal('https://gntl.cash/')" href="#">https://gntl.cash/</a>
                 </p>
                 <p>
-                    <a @click="openExternal('https://telegram.arqma.com')" href="#">Telegram</a> -
-                    <a @click="openExternal('https://chat.arqma.com')" href="#">Discord</a> -
-                    <a @click="openExternal('https://www.reddit.com/r/arqma/')" href="#">Reddit</a> -
-                    <a @click="openExternal('https://github.com/arqma/arqma-electron-wallet')" href="#">Github</a>
+                    <a @click="openExternal('https://discord.com/invite/4HyVA2A')" href="#">Discord</a> -
+                    <a @click="openExternal('https://www.reddit.com/r/gntlcoin/')" href="#">Reddit</a> -
+                    <a @click="openExternal('https://github.com/the-gntl-project/gntl-electron-wallet')" href="#">Github</a>
                 </p>
             </div>
 

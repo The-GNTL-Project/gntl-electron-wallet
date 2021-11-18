@@ -1,5 +1,5 @@
 <template>
-<div class="arqma-field" :class="{disable, 'disable-hover': disableHover}">
+<div class="gntl-field" :class="{disable, 'disable-hover': disableHover}">
     <div class="label row items-center" v-if="label" :disabled="disable">
         {{ label }}
         <span v-if="optional" class="optional">({{ $t("fieldLabels.optional") }})</span>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-    name: "ArqmaField",
+    name: "GntlField",
     props: {
         label: {
             type: String,
@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style lang="scss">
-.arqma-field {
+.gntl-field {
     .label {
         margin: 6px 0;
         font-weight: bold;

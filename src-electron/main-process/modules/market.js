@@ -1,6 +1,6 @@
 /**
- * arqma-electron-wallet
- * https://github.com/arqma/arqma-electron-wallet
+ * gntl-electron-wallet
+ * https://github.com/gntl/gntl-electron-wallet
  *
  * market.js
  *
@@ -20,7 +20,7 @@ export class Market {
 
         // this.agent = new https.Agent({ keepAlive: true, maxSockets: 1 })
         this.options = null
-        this.endpoint = "/api/v3/coins/arqma/tickers"
+        this.endpoint = "/api/v3/coins/gntl/tickers"
         this.rpc = new RPC()
     }
 

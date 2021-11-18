@@ -18,24 +18,24 @@ export class Daemon {
         this.dealer = {}
         this.zmq_enabled = false
 
-        
+
     }
 
     checkVersion () {
         return new Promise((resolve, reject) => {
             if (process.platform === "win32") {
-                let arqmad_path = path.join(__arqma_bin, "arqmad.exe")
-                let arqmad_version_cmd = `"${arqmad_path}" --version`
-                if (!fs.existsSync(arqmad_path)) { resolve(false) }
-                child_process.exec(arqmad_version_cmd, (error, stdout, stderr) => {
+                let gntld_path = path.join(__gntl_bin, "gntld.exe")
+                let gntld_version_cmd = `"${gntld_path}" --version`
+                if (!fs.existsSync(gntld_path)) { resolve(false) }
+                child_process.exec(gntld_version_cmd, (error, stdout, stderr) => {
                     if (error) { resolve(false) }
                     resolve(stdout)
                 })
             } else {
-                let arqmad_path = path.join(__arqma_bin, "arqmad")
-                let arqmad_version_cmd = `"${arqmad_path}" --version`
-                if (!fs.existsSync(arqmad_path)) { resolve(false) }
-                child_process.exec(arqmad_version_cmd, { detached: true }, (error, stdout, stderr) => {
+                let gntld_path = path.join(__gntl_bin, "gntld")
+                let gntld_version_cmd = `"${gntld_path}" --version`
+                if (!fs.existsSync(gntld_path)) { resolve(false) }
+                child_process.exec(gntld_version_cmd, { detached: true }, (error, stdout, stderr) => {
                     if (error) { resolve(false) }
                     resolve(stdout)
                 })
@@ -46,11 +46,11 @@ export class Daemon {
     async checkRemoteHeight () {
         let options = {
             protocol: "https://",
-            hostname: "explorer.arqma.com",
+            hostname: "explorer.pool.gntl.co.uk",
             endpoint: "/api/networkinfo"
         }
         if (this.testnet) {
-            options.hostname = "stageblocks.arqma.com"
+            options.hostname = "stageblocks.gntl.com"
         }
         const getInfoData = await this.rpc.callAPI({}, options)
         try {
@@ -86,7 +86,7 @@ export class Daemon {
     start (options) {
         if (options.daemon.type === "remote") {
             this.local = false
-            
+
             // save this info for later RPC calls
             this.protocol = "http://"
             // this.hostname = options.daemon.remote_host
@@ -145,10 +145,10 @@ export class Daemon {
             if (options.app.testnet) {
                 this.testnet = true
                 args.push("--testnet")
-                args.push("--log-file", path.join(options.app.data_dir, "testnet", "logs", "arqmad.log"))
+                args.push("--log-file", path.join(options.app.data_dir, "testnet", "logs", "gntld.log"))
                 // args.push("--add-peer", "45.77.68.151:13310")
             } else {
-                args.push("--log-file", path.join(options.app.data_dir, "logs", "arqmad.log"))
+                args.push("--log-file", path.join(options.app.data_dir, "logs", "gntld.log"))
             }
 
             if (options.daemon.rpc_bind_ip !== "127.0.0.1") { args.push("--confirm-external-bind") }
@@ -161,9 +161,9 @@ export class Daemon {
             }
 
             if (process.platform === "win32") {
-                this.daemonProcess = child_process.spawn(path.join(__arqma_bin, "arqmad.exe"), args)
+                this.daemonProcess = child_process.spawn(path.join(__gntl_bin, "gntld.exe"), args)
             } else {
-                this.daemonProcess = child_process.spawn(path.join(__arqma_bin, "arqmad"), args, {
+                this.daemonProcess = child_process.spawn(path.join(__gntl_bin, "gntld"), args, {
                     detached: true
                 })
             }
@@ -365,7 +365,7 @@ export class Daemon {
     async heartbeatAction () {
         try {
             let heartBeatActionData = []
-            
+
             // No difference between local and remote heartbeat action for now
             if (this.local) {
                 heartBeatActionData = [
@@ -376,7 +376,7 @@ export class Daemon {
                     await this.rpc.sendRPC("get_info")
                 ]
             }
-           
+
             let daemon_info = {}
 
             for (let n of heartBeatActionData) {

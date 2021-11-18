@@ -78,16 +78,16 @@ export default {
             if(!(/^[0-9A-Za-z]+$/.test(input))) return false
 
             switch (input.substring(0,4)) {
-                case "ar":
-                case "aRi":
-                    return input.length === 97
+                case "gnt":
+                case "gnti":
+                    return input.length === 98
 
-                case "aRS":
+                case "gnts":
                     return input.length == 99
 
-                case "ar":
-                case "aRi":
-                case "aRS":
+                case "gnt":
+                case "gnti":
+                case "gnts":
                     return input.length === 109
 
                 default:

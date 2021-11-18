@@ -243,7 +243,7 @@ export default {
         deleteWallet: "Удалить Кошелек",
         exportTransactions: "Экспортные транзакции",
         exportWallet: "экспортный кошелек",
-        exit: "Закрыть Кошелек Arqma",
+        exit: "Закрыть Кошелек Gntl",
         importOldGUIWallet: "Импортировать кошельки из старого GUI",
         manageKeyImages: "Управлять Ключевыми Образами",
         openWallet: "Открыть кошелек",
@@ -328,7 +328,7 @@ export default {
         warnings: {
             noKeyImageExport: "Не найдено ключевых образов для экспорта",
             usingLocalNode: "Не удалось подключиться к удаленной ноде, переключаемся на локальную ноду",
-            usingRemoteNode: "Не найден файл arqmad, используется удаленная нода"
+            usingRemoteNode: "Не найден файл gntld, используется удаленная нода"
         }
     },
     placeholders: {
@@ -404,10 +404,10 @@ export default {
         editAddressBookEntry: "Редактировать запись адресной книги",
         loading: "Загрузка...",
         loadingSettings: "Загрузка настроек",
-        arqmaBalance: "Баланс",
-        arqmaExchangeBalance: "Баланс",
-        arqmaUnlockedBalance: "Разблокированый баланс",
-        arqmaUnlockedShort: "Разблокировано",
+        gntlBalance: "Баланс",
+        gntlExchangeBalance: "Баланс",
+        gntlUnlockedBalance: "Разблокированый баланс",
+        gntlUnlockedShort: "Разблокировано",
         noTransactionsFound: "Транзакции не найдены",
         notes: "Заметки",
         numberOfUnspentOutputs: "Количество непотраченных выходов",
