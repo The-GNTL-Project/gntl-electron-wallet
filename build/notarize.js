@@ -30,7 +30,7 @@ exports.default = async function notarizing(context) {
   }
 
   const options = {
-    appBundleId: "com.arqma-project.electron-wallet",
+    appBundleId: "com.gntl-project.electron-wallet",
     appPath: `${appOutDir}/${appName}.app`,
     appleId: ELECTRON_WALLET_APPLE_ID,
     appleIdPassword: ELECTRON_WALLET_PASSWORD

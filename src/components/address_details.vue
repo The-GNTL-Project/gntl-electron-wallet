@@ -32,15 +32,15 @@
 
                         <div class="infoBox">
                             <div class="infoBoxContent">
-                                <div class="text"><span>{{ $t("strings.arqmaBalance") }}</span></div>
-                                <div class="value"><span><FormatArqma :amount="address.balance" /></span></div>
+                                <div class="text"><span>{{ $t("strings.gntlBalance") }}</span></div>
+                                <div class="value"><span><FormatGntl :amount="address.balance" /></span></div>
                             </div>
                         </div>
 
                         <div class="infoBox">
                             <div class="infoBoxContent">
-                                <div class="text"><span>{{ $t("strings.arqmaUnlockedBalance") }}</span></div>
-                                <div class="value"><span><FormatArqma :amount="address.unlocked_balance" /></span></div>
+                                <div class="text"><span>{{ $t("strings.gntlUnlockedBalance") }}</span></div>
+                                <div class="value"><span><FormatGntl :amount="address.unlocked_balance" /></span></div>
                             </div>
                         </div>
 
@@ -58,14 +58,14 @@
 
                         <div class="infoBox">
                             <div class="infoBoxContent">
-                                <div class="text"><span>{{ $t("strings.arqmaBalance") }}</span></div>
+                                <div class="text"><span>{{ $t("strings.gntlBalance") }}</span></div>
                                 <div class="value"><span>N/A</span></div>
                             </div>
                         </div>
 
                         <div class="infoBox">
                             <div class="infoBoxContent">
-                                <div class="text"><span>{{ $t("strings.arqmaUnlockedBalance") }}</span></div>
+                                <div class="text"><span>{{ $t("strings.gntlUnlockedBalance") }}</span></div>
                                 <div class="value"><span>N/A</span></div>
                             </div>
                         </div>
@@ -132,7 +132,7 @@
 import { mapState } from "vuex"
 const { clipboard, nativeImage } = require("electron")
 import AddressHeader from "components/address_header"
-import FormatArqma from "components/format_arqma"
+import FormatGntl from "components/format_gntl"
 import QrcodeVue from "qrcode.vue";
 import TxList from "components/tx_list"
 export default {
@@ -188,7 +188,7 @@ export default {
     components: {
         AddressHeader,
         TxList,
-        FormatArqma,
+        FormatGntl,
         QrcodeVue
     }
 }

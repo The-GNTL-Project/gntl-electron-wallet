@@ -244,7 +244,7 @@ export default {
         deleteWallet: "Delete Wallet",
         exportTransactions: "Export Transactions",
         exportWallet: "Export Wallet",
-        exit: "Exit Arqma GUI Wallet",
+        exit: "Exit Gntl GUI Wallet",
         importOldGUIWallet: "Import wallets from old GUI",
         manageKeyImages: "Manage Key Images",
         openWallet: "Open wallet",
@@ -331,7 +331,7 @@ export default {
         warnings: {
             noKeyImageExport: "No key images found to export",
             usingLocalNode: "Could not access remote node, switching to local only",
-            usingRemoteNode: "arqmad not found, using remote node"
+            usingRemoteNode: "gntld not found, using remote node"
         }
     },
     placeholders: {
@@ -416,10 +416,10 @@ export default {
         getStarted: "To get started, select one of the options below:",
         loading: "Loading...",
         loadingSettings: "Loading settings",
-        arqmaBalance: "Balance",
-        arqmaExchangeBalance: "Balance",
-        arqmaUnlockedBalance: "Unlocked balance",
-        arqmaUnlockedShort: "Unlocked",
+        gntlBalance: "Balance",
+        gntlExchangeBalance: "Balance",
+        gntlUnlockedBalance: "Unlocked balance",
+        gntlUnlockedShort: "Unlocked",
         noTransactionsFound: "No transactions found",
         notes: "Notes",
         numberOfUnspentOutputs: "Number of unspent outputs",
@@ -520,7 +520,7 @@ export default {
         versionDaemon: "Daemon Version",
         versionWallet: "Wallet Version",
         welcome: "Welcome",
-        welcomeNoWallet: "Welcome to Arqma Electron Wallet",
+        welcomeNoWallet: "Welcome to Gntl Electron Wallet",
         yourWallets: "Your Wallets"
     },
     headers: {

@@ -4,7 +4,7 @@ const path = require("path")
 
 async function download () {
     const { platform } = process
-    const repoUrl = "https://api.github.com/repos/arqma/arqma/releases/latest"
+    const repoUrl = "https://api.github.com/repos/gntl/gntl/releases/latest"
     try {
         const pwd = process.cwd()
         const downloadDir = path.join(pwd, "downloads")
@@ -15,11 +15,11 @@ async function download () {
             .map(asset => asset["browser_download_url"])
             .find(url => {
                 if (platform === "darwin") {
-                    return url.includes("osx-x64-v6.1.0.zip")
+                    return url.includes("GNTL-macOS-v1.0.1.tar.gz")
                 } else if (platform === "win32") {
                     return url.includes("win64")
                 }
-                return url.includes("x86_64-linux-gnu-compat.tar.gz")
+                return url.includes("GNTL-x86_64-linux-gnu-v1.0.1.tar.gz")
             })
 
         if (!url) { throw new Error("Download url not found for " + process) }

@@ -28,18 +28,15 @@ export class Backend {
 
     init () {
         // spawn(process.execPath, ['./go.js'], {stdio:'ignore'})
-        this.remotes = [{ host: "eu.supportarqma.com", port: 19994 },
-            { host: "node.supportarqma.com", port: 19994 },
-            { host: "jp.supportarqma.com", port: 19994 },
-            { host: "us.supportarqma.com", port: 19994 },
-            { host: "checkmyarqmablocks.club", port: 19994 }]
+        this.remotes = [{ host: "node.pool.gntl.co.uk", port: 16662 },
+            { host: "node.pool.gntl.co.uk", port: 16662 }]
 
         if (os.platform() == "win32") {
-            this.config_dir = "C:\\ProgramData\\arqma"
-            this.wallet_dir = `${os.homedir()}\\Documents\\Arqma`
+            this.config_dir = "C:\\ProgramData\\gntl"
+            this.wallet_dir = `${os.homedir()}\\Documents\\Gntl`
         } else {
-            this.config_dir = path.join(os.homedir(), ".arqma")
-            this.wallet_dir = path.join(os.homedir(), "Arqma")
+            this.config_dir = path.join(os.homedir(), ".gntl")
+            this.wallet_dir = path.join(os.homedir(), "Gntl")
         }
 
         if (!fs.existsSync(this.config_dir)) {
@@ -55,11 +52,11 @@ export class Backend {
         const daemon = {
             type: "remote",
             p2p_bind_ip: "0.0.0.0",
-            p2p_bind_port: 19993,
+            p2p_bind_port: 16661,
             rpc_bind_ip: "127.0.0.1",
-            rpc_bind_port: 19994,
+            rpc_bind_port: 16662,
             zmq_bind_ip: "127.0.0.1",
-            zmq_bind_port: 19995,
+            zmq_bind_port: 16663,
             out_peers: -1,
             in_peers: -1,
             limit_rate_up: -1,
@@ -70,8 +67,8 @@ export class Backend {
         const daemons = {
             mainnet: {
                 ...daemon,
-                remote_host: "eu.supportarqma.com",
-                remote_port: 19994
+                remote_host: "node.pool.gntl.co.uk",
+                remote_port: 16662
             },
             stagenet: {
                 ...daemon,
@@ -112,14 +109,14 @@ export class Backend {
             },
             daemon: {
                 type: "local_remote",
-                remote_host: "eu.supportarqma.com",
-                remote_port: 19994,
+                remote_host: "node.pool.gntl.co.uk",
+                remote_port: 16662,
                 p2p_bind_ip: "0.0.0.0",
-                p2p_bind_port: 19993,
+                p2p_bind_port: 16661,
                 rpc_bind_ip: "127.0.0.1",
-                rpc_bind_port: 19994,
+                rpc_bind_port: 16662,
                 zmq_bind_ip: "127.0.0.1",
-                zmq_bind_port: 19995,
+                zmq_bind_port: 16663,
                 out_peers: 8,
                 in_peers: 0,
                 limit_rate_up: -1,
@@ -167,8 +164,8 @@ export class Backend {
                     protocol: "https://",
                     hostname: "api.coingecko.com",
                     port: 443,
-                    coin: "arqma",
-                    endpoint: "/api/v3/coins/arqma/tickers"
+                    coin: "gntl",
+                    endpoint: "/api/v3/coins/gntl/tickers"
                 }
             },
 
@@ -313,7 +310,7 @@ export class Backend {
             }
 
             if (path) {
-                const baseUrl = net_type === "testnet" ? "https://stageblocks.arqma.com" : "https://explorer.arqma.com"
+                const baseUrl = net_type === "testnet" ? "https://stageblocks.gntl.com" : "https://explorer.pool.gntl.co.uk"
                 const url = `${baseUrl}/${path}/`
                 require("electron").shell.openExternal(url + params.id)
             }
@@ -502,18 +499,18 @@ export class Backend {
                         config: this.config_data,
                         pending_config: this.config_data
                     })
-                    this.send("show_notification", { type: "warning", textColor: "black", message: "Warning: arqmad not found, using remote node", timeout: 2000 })
+                    this.send("show_notification", { type: "warning", textColor: "black", message: "Warning: gntld not found, using remote node", timeout: 2000 })
                 }
 
                 this.market.start(this.config_data)
                 .then(() => {
-                    
+
                 })
                 .catch(error => {
                 })
                 this.daemon.checkRemoteDaemon(this.config_data)
                     .then((data) => {
-                        
+
                         if (data.hasOwnProperty("error")) {
                             // error contacting remote daemon
 

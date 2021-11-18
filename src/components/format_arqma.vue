@@ -1,12 +1,12 @@
 <template>
 <span>
-    {{ value }} ARQ
+    {{ value }} GNTL
 </span>
 </template>
 
 <script>
 export default {
-    name: "FormatArqma",
+    name: "FormatGntl",
     props: {
         amount: {
             required: true

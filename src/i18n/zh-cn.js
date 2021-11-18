@@ -243,7 +243,7 @@ export default {
         deleteWallet: "删除电子钱包",
         exportTransactions: "出口交易",
         exportWallet: "出口錢包",
-        exit: "出口 Arqma GUI Wallet",
+        exit: "出口 Gntl GUI Wallet",
         importOldGUIWallet: "从旧的进口钱包 GUI",
         manageKeyImages: "管理关键图像",
         openWallet: "打开钱包",
@@ -328,7 +328,7 @@ export default {
         warnings: {
             noKeyImageExport: "没有找到要导出的关键图像",
             usingLocalNode: "无法访问远程节点，仅切换到本地",
-            usingRemoteNode: "arqmad 找不到，使用远程节点"
+            usingRemoteNode: "gntld 找不到，使用远程节点"
         }
     },
     placeholders: {
@@ -404,10 +404,10 @@ export default {
         editAddressBookEntry: "编辑地址簿条目",
         loading: "加载...",
         loadingSettings: "加载设置",
-        arqmaBalance: "平衡",
-        arqmaExchangeBalance: "平衡",
-        arqmaUnlockedBalance: "解锁平衡",
-        arqmaUnlockedShort: "解锁",
+        gntlBalance: "平衡",
+        gntlExchangeBalance: "平衡",
+        gntlUnlockedBalance: "解锁平衡",
+        gntlUnlockedShort: "解锁",
         noTransactionsFound: "没有发现交易",
         notes: "笔记",
         numberOfUnspentOutputs: "未用完的输出数量",
