@@ -38,6 +38,12 @@ jobs:
               run: unzip latest.zip
               shell: bash
               working-directory: ./downloads
+          
+            - name: Extract 7z binaries
+              if: runner.os != 'Linux'
+              run: 7z x latest.7z
+              shell: bash
+              working-directory: ./downloads
 
             - name: Move gntld binaries
               run: |
