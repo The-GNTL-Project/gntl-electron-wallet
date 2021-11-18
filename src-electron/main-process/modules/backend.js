@@ -73,16 +73,16 @@ export class Backend {
             stagenet: {
                 ...daemon,
                 type: "local",
-                p2p_bind_port: 39993,
-                rpc_bind_port: 39994,
-                zmq_bind_port: 39995
+                p2p_bind_port: 36661,
+                rpc_bind_port: 36662,
+                zmq_bind_port: 36663
             },
             testnet: {
                 ...daemon,
                 type: "local",
-                p2p_bind_port: 29993,
-                rpc_bind_port: 29994,
-                zmq_bind_port: 29995
+                p2p_bind_port: 26661,
+                rpc_bind_port: 26662,
+                zmq_bind_port: 26663
             }
         }
 

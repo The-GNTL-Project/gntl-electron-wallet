@@ -25,7 +25,7 @@ export const address = (input) => {
                     case "gnti":
                         resolve(input.length === 110)
                         break
-                    case "gnt":
+                    case "gnt1":
                         resolve(input.length === 98)
                         break
                     case "gnts":
