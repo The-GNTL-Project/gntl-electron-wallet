@@ -15,7 +15,7 @@ async function download () {
             .map(asset => asset["browser_download_url"])
             .find(url => {
                 if (platform === "darwin") {
-                    return url.includes("GNTL-macOS-v1.0.1.tar.gz")
+                    return url.includes("macOS-v1.0.1.tar.gz")
                 } else if (platform === "win32") {
                     return url.includes("win64")
                 }
