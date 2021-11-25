@@ -1,6 +1,6 @@
 {
   "name": "gntl-electron-wallet",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "daemonVersion": "1.0.1",
   "description": "Modern GUI interface for Gntl Currency",
   "productName": "GNTL Electron Wallet",
@@ -11,7 +11,7 @@
   "cordovaId": "com.gntl.wallet",
   "author": {
     "name": "Arqtras",
-    "email": "arqtras@gntl.com"
+    "email": "arqtras@arqma.com"
   },
   "private": true,
   "scripts": {
