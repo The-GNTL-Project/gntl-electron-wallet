@@ -21,7 +21,7 @@
                             @blur="$v.newTx.amount.$touch"
                             hide-underline
                         />
-                        <q-btn color="secondary" @click="newTx.amount = unlocked_balance / 1e6" :text-color="theme=='dark'?'white':'dark'">
+                        <q-btn color="secondary" @click="newTx.amount = unlocked_balance / 1e9 - 0.001" :text-color="theme=='dark'?'white':'dark'">
                             {{ $t("buttons.all") }}
                         </q-btn>
                     </GntlField>
