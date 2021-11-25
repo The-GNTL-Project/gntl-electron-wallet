@@ -3,14 +3,14 @@
   "version": "1.0.3",
   "daemonVersion": "1.0.1",
   "description": "Modern GUI interface for Gntl Currency",
-  "productName": "GNTL Electron Wallet",
+  "productName": "Gntl Electron Wallet",
   "repository": {
     "type": "git",
-    "url": "https://github.com/The-GNTL-Project/gntl-electron-wallet.git"
+    "url": "https://github.com/the-gntl-project/gntl-electron-wallet.git"
   },
   "cordovaId": "com.gntl.wallet",
   "author": {
-    "name": "Arqtras",
+    "name": "Gntl",
     "email": "arqtras@arqma.com"
   },
   "private": true,
@@ -48,7 +48,7 @@
     "qrcode.vue": "^1.7.0",
     "rotating-file-stream": "^1.4.1",
     "rxjs": "^6.6.7",
-    "ryo-core-js": "git://github.com/The-GNTL-Project/ryo-core-js.git",
+    "ryo-core-js": "git://github.com/the-gntl-project/ryo-core-js.git",
     "urllib": "^2.37.1",
     "utf-8-validate": "^5.0.5",
     "validation": "0.0.1",
