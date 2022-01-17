@@ -1,20 +1,23 @@
-# Gntl Electron GUI Wallet
+# GNTL Electron (GUI) Wallet
+<img src="https://github.com/The-GNTL-Project/Images/raw/master/GNTL_Icon_Round_200x200.png" alt="GNTL Coin">
 
-### Introduction
-Gntl is a private cryptocurrency based on ArQmA.
-More information on the project can be found on the [website](https://gntl.cash) . Gntl is an open source project, and we encourage contributions from anyone with something to offer.
+Copyright (c) 2022-2022, The GNTL Project    
+Copyright (c) 2018-2021, The Arqma Network   
 
+## Introduction
+GNTL is a private cryptocurrency based on ArQmA.
+More information on the project can be found on the [website](https://gntl.cash).  GNTL is an open source project, and we encourage contributions from anyone with something to offer.
 
-### About this project
-
-This is the new electron GUI for Gntl. It is open source and completely free to use without restrictions, anyone may create an alternative implementation of the Gntl Electron GUI that uses the protocol and network in a compatible manner.
+## About this project
+This is the new electron GUI for GNTL.  It is open source and completely free to use without restrictions, anyone may create an alternative implementation of the GNTL Electron GUI that uses the protocol and network in a compatible manner.
 
 Please submit any changes as pull requests to the development branch, all changes are assessed in the development branch before being merged to master, release tags are considered stable builds for the GUI.
 
-#### Pre-requisites
-- Download latest [Gntld](https://github.com/the-gntl-project/gntl/releases/latest)
+## Compile from Source
+### Pre-requisites
+- Download latest [GNTL Release](https://github.com/the-gntl-project/gntl/releases/latest)
 
-#### Commands
+### Compile
 ```
 nvm use 12.20.2 ##install with nvm install 12.20.2)
 npm install -g quasar-cli
@@ -25,20 +28,18 @@ cp path_to_gntl_binaries/gntl-wallet-rpc bin/
 npm install --force
 ```
 
-For dev:
+#### Development
 ```
 npm run dev
 ```
 
-For building:
-
-**Note:** This will only build the binaries for the system you run the command on. Running this command on `linux` will only make `linux` binaries, no `mac` or `windows` binaries.
+### Building
+**Note:** This will only build the binaries for the system you run the command on.  Running this command on `linux` will only make `linux` binaries, no `mac` or `windows` binaries.
 ```
 npm run build
 ```
 
 ### Adding language support
-
 Adding a new language is fairly simple.
 
 1. Duplicate the language file `src/i18n/en-us.js` and rename it to the relevant language code.
@@ -57,9 +58,7 @@ Adding a new language is fairly simple.
    - Ref: https://github.com/egoist/vue-timeago#update-locale-globally
 5. Submit a PR with your changes.
 
-
-### Credits
-
+## Credits
 mosu-forge https://github.com/ryo-currency/ryo-wallet
 
 Mikunj https://github.com/loki-project/loki-electron-gui-wallet
