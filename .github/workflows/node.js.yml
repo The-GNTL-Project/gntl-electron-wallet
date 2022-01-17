@@ -1,8 +1,5 @@
-name: Gntl Electron Wallet Build
-on:
-    push:
-        branches:
-            - master
+name: GNTL Electron Wallet Build
+on: [push, pull_request]
 
 jobs:
     build:
