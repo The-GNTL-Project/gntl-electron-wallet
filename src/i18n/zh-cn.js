@@ -243,7 +243,7 @@ export default {
         deleteWallet: "删除电子钱包",
         exportTransactions: "出口交易",
         exportWallet: "出口錢包",
-        exit: "出口 Gntl GUI Wallet",
+        exit: "出口 GNTL GUI Wallet",
         importOldGUIWallet: "从旧的进口钱包 GUI",
         manageKeyImages: "管理关键图像",
         openWallet: "打开钱包",

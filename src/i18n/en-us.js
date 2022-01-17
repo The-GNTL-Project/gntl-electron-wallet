@@ -244,7 +244,7 @@ export default {
         deleteWallet: "Delete Wallet",
         exportTransactions: "Export Transactions",
         exportWallet: "Export Wallet",
-        exit: "Exit Gntl GUI Wallet",
+        exit: "Exit GNTL GUI Wallet",
         importOldGUIWallet: "Import wallets from old GUI",
         manageKeyImages: "Manage Key Images",
         openWallet: "Open wallet",
@@ -520,7 +520,7 @@ export default {
         versionDaemon: "Daemon Version",
         versionWallet: "Wallet Version",
         welcome: "Welcome",
-        welcomeNoWallet: "Welcome to Gntl Electron Wallet",
+        welcomeNoWallet: "Welcome to GNTL Electron Wallet",
         yourWallets: "Your Wallets"
     },
     headers: {

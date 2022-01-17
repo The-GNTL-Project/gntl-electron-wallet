@@ -35,7 +35,7 @@ let template = [
         submenu: [
             {
                 label: "Learn More",
-                click () { require("electron").shell.openExternal("https://gntl.com/") }
+                click () { require("electron").shell.openExternal("https://gntl.cash/") }
             }
         ]
     }
@@ -43,7 +43,7 @@ let template = [
 
 if (process.platform === "darwin") {
     template.unshift({
-        label: "Gntl Electron Wallet",
+        label: "GNTL Electron Wallet",
         submenu: [
             { role: "about" },
             { type: "separator" },

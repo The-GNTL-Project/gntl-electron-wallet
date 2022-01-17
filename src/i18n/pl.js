@@ -244,7 +244,7 @@ export default {
         deleteWallet: "Usuń portfel",
         exportTransactions: "Export transakcji",
         exportWallet: "Eksport portfela",
-        exit: "Wyjdź Gntl GUI Wallet",
+        exit: "Wyjdź GNTL GUI Wallet",
         importOldGUIWallet: "Importuj portfel z starego GUI",
         manageKeyImages: "Zarządzaj kluczami",
         openWallet: "Otwórz portfel",

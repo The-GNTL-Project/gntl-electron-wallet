@@ -21,7 +21,7 @@ jobs:
             - name: Install dependencies
               run: npm install -f
 
-            - name: Download Gntld binaries
+            - name: Download GNTL binaries
               run: node ./build/download-binaries.js
 
             - name: Extract gz binaries

@@ -243,7 +243,7 @@ export default {
         deleteWallet: "Smazat Peněženku",
         exportWallet: "Exportovat peněženku",
         exportTransactions: "Exportní transakce",
-        exit: "Ukončit Gntl GUI Peněženku",
+        exit: "Ukončit GNTL GUI Peněženku",
         importOldGUIWallet: "Import peněženky ze starého GUI",
         manageKeyImages: "Správa Key Images",
         openWallet: "Otevřít peněženku",
