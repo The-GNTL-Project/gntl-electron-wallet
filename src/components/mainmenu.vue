@@ -37,7 +37,7 @@
     <q-modal minimized ref="aboutModal">
         <div class="about-modal">
 
-            <img class="q-mb-md" src="statics/gntl.svg" height="42" />
+            <img class="q-mb-md" src="statics/gntl.svg" height="120" />
 
             <p class="q-my-sm">{{ $t("titles.versionWallet") }}: v{{ version }}</p>
             <p class="q-my-sm">{{ $t("titles.versionDaemon") }}: v{{ daemonVersion }}</p>
