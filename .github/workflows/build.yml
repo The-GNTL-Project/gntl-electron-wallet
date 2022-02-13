@@ -7,52 +7,52 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-              os: [windows-2016, macos-latest, ubuntu-latest]
+              os: [windows-2019, macos-11, ubuntu-20.04]
 
         steps:
-            - name: Checkout git repo
+            - name: Check-out Git Repo
               uses: actions/checkout@v1
 
-            - name: Install node
+            - name: Install Node
               uses: actions/setup-node@v1
               with:
                 node-version: "12.20.2"
 
-            - name: Install dependencies
+            - name: Install Dependencies
               run: npm install -f
 
-            - name: Download GNTL binaries
+            - name: Download GNTL Binaries
               run: node ./build/download-binaries.js
 
-            - name: Extract gz binaries
-              if: runner.os == 'Linux'
+            - name: Extract GNTL Tar Binaries
+              if: ${{runner.os == 'Linux' || runner.os == 'macOS'}}
               run: tar -xf latest.gz
               shell: bash
               working-directory: ./downloads
 
-            - name: Extract 7z binaries
-              if: runner.os != 'Linux'
+            - name: Extract GNTL 7z Binaries
+              if: runner.os == 'Windows'
               run: 7z x latest.7z
               shell: bash
               working-directory: ./downloads
 
-            - name: Move gntld binaries
+            - name: Move GNTL Daemon and Wallet Binaries
               run: |
                 find ./downloads -type f -name "gntld*" -exec cp '{}' ./bin \;
                 find ./downloads -type f -name "gntl-wallet-rpc*" -exec cp '{}' ./bin \;
               shell: bash
 
-            - name: Verify binaries
+            - name: Verify Binaries
               run: ls ./bin
               shell: bash
 
-            - name: Publish window and linux binaries
+            - name: Publish Windows and Linux Binaries
               if: runner.os != 'macOS'
               run: npm run build
               env:
                 GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: Publish mac binaries
+            - name: Publish mac Binaries
               if: runner.os == 'macOS'
               run: npm run build
               env:
@@ -63,12 +63,12 @@ jobs:
                 ELECTRON_WALLET_PASSWORD: ${{ secrets.ELECTRON_WALLET_PASSWORD }}
                 ELECTRON_WALLET_TEAM_ID: ${{ secrets.ELECTRON_WALLET_TEAM_ID }}
 
-            - name: Remove un-needed artifacts
+            - name: Remove un-needed Artifacts
               run: rm -r -- ./*/
               shell: bash
               working-directory: ./dist/electron-mat/Packaged
-
-            - name: Upload artifacts
+              
+            - name: Upload Artifacts
               uses: actions/upload-artifact@v1
               with:
                 name: ${{ runner.OS }}
