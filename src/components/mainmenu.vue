@@ -41,18 +41,16 @@
 
             <p class="q-my-sm">{{ $t("titles.versionWallet") }}: v{{ version }}</p>
             <p class="q-my-sm">{{ $t("titles.versionDaemon") }}: v{{ daemonVersion }}</p>
-            <p class="q-my-sm">Copyright (c) 2021-2022 The GNTL Project</p>
+            <p class="q-my-sm">Copyright (c) 2021-2022, The GNTL Project</p>
             <p class="q-my-sm">Copyright (c) 2018-2021, ArQmA Project</p>
             <p class="q-my-sm">Copyright (c) 2018-2020, Ryo Currency Project</p>
             <p class="q-my-sm">All rights reserved.</p>
 
             <div class="q-mt-md q-mb-lg external-links">
                 <p>
-                    <a @click="openExternal('https://gntl.cash/')" href="#">https://gntl.cash/</a>
-                </p>
-                <p>
-                    <a @click="openExternal('https://discord.com/invite/4HyVA2A')" href="#">Discord</a> -
-                    <a @click="openExternal('https://www.reddit.com/r/gntlcoin/')" href="#">Reddit</a> -
+                    <a @click="openExternal('https://gntl.cash/')" href="#">gntl.cash</a> |
+                    <a @click="openExternal('https://discord.com/invite/4HyVA2A')" href="#">Discord</a> |
+                    <a @click="openExternal('https://www.reddit.com/r/gntlcoin/')" href="#">Reddit</a> |
                     <a @click="openExternal('https://github.com/the-gntl-project/gntl-electron-wallet')" href="#">Github</a>
                 </p>
             </div>
