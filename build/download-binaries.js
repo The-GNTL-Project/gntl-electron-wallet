@@ -15,11 +15,11 @@ async function download () {
             .map(asset => asset["browser_download_url"])
             .find(url => {
                 if (platform === "linux") {
-                    return url.includes("Linux-x86_64")
+                    return url.includes("GNTL-Linux-x86_64")
                 } else if (platform === "win32") {
-                    return url.includes("Windows-x64")
+                    return url.includes("GNTL-Windows-x64")
                 }
-                return url.includes("macOS")
+                return url.includes("GNTL-macOS")
             })
 
         if (!url) { throw new Error("Download url not found for " + process) }
