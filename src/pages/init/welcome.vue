@@ -6,7 +6,7 @@
         <q-step default :title="$t('titles.welcome')" class="first-step">
 
             <div class="welcome-container">
-                <img src="statics/gntl.svg" height="100" class="q-mb-md">
+                <img src="statics/gntl.svg" height="192" class="q-mb-md">
                 <div>{{ $t("titles.versionWallet") }}: v{{ version }}</div>
                 <div>{{ $t("titles.versionDaemon") }}: v{{ daemonVersion }}</div>
 

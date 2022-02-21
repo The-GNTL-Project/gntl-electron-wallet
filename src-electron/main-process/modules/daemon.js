@@ -46,11 +46,11 @@ export class Daemon {
     async checkRemoteHeight () {
         let options = {
             protocol: "https://",
-            hostname: "explorer.pool.gntl.co.uk",
+            hostname: "explorer.gntl.uk",
             endpoint: "/api/networkinfo"
         }
         if (this.testnet) {
-            options.hostname = "stageblocks.gntl.com"
+            options.hostname = "explorerstg.gntl.uk"
         }
         const getInfoData = await this.rpc.callAPI({}, options)
         try {

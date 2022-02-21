@@ -3,15 +3,15 @@
     <div class="status-line">
 
         <template v-if="config.daemon.type !== 'remote'">
-            <div>Daemon: {{ (config.daemon.type === 'local_zmq' ? daemon.info.height : daemon.info.height_without_bootstrap) }} / {{ target_height }} ({{ daemon_local_pct }}%)</div>
+            <div>Local Daemon Height: {{ (config.daemon.type === 'local_zmq' ? daemon.info.height : daemon.info.height_without_bootstrap) }} / {{ target_height }} ({{ daemon_local_pct }}%)</div>
         </template>
 
 
         <template v-if="config.daemon.type !== 'local' && config.daemon.type !== 'local_zmq'">
-            <div>Remote: {{ daemon.info.height }}</div>
+            <div>Remote Node Height: {{ daemon.info.height }}</div>
         </template>
 
-        <div>Wallet: {{ wallet.info.height }} / {{ target_height }} ({{ wallet_pct }}%)</div>
+        <div>Wallet Height: {{ wallet.info.height }} / {{ target_height }} ({{ wallet_pct }}%)</div>
 
         <template v-if="config.pool.server.enabled">
             <template v-if="pool.status == -1">

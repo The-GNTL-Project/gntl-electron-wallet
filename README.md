@@ -1,7 +1,7 @@
 # GNTL Electron (GUI) Wallet
 <img src="https://github.com/The-GNTL-Project/Images/raw/master/GNTL_Icon_Round_200x200.png" alt="GNTL Coin">
 
-Copyright (c) 2022-2022, The GNTL Project    
+Copyright (c) 2021-2022 The GNTL Project    
 Copyright (c) 2018-2021, The Arqma Network   
 
 ## Introduction
@@ -9,7 +9,7 @@ GNTL is a private cryptocurrency based on ArQmA.
 More information on the project can be found on the [website](https://gntl.cash).  GNTL is an open source project, and we encourage contributions from anyone with something to offer.
 
 ## About this project
-This is the new electron GUI for GNTL.  It is open source and completely free to use without restrictions, anyone may create an alternative implementation of the GNTL Electron GUI that uses the protocol and network in a compatible manner.
+This is the new Electron GUI for GNTL.  It is open source and completely free to use without restrictions, anyone may create an alternative implementation of the GNTL Electron GUI that uses the protocol and network in a compatible manner.
 
 Please submit any changes as pull requests to the development branch, all changes are assessed in the development branch before being merged to master, release tags are considered stable builds for the GUI.
 

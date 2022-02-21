@@ -411,7 +411,7 @@
         </div>
         <div v-if="page=='stats'">
             <div class="q-layout-page">
-              <webview src="https://solo-pool.gntl.com/" autosize="on" ></webview>
+              <webview src="https://gntl.pool.gntl.uk/" autosize="on" ></webview>
             </div>
         </div>
         <div v-if="page=='blocks'">

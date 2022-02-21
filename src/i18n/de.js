@@ -231,7 +231,7 @@ export default {
         wallet: "Wallet"
     },
     menuItems: {
-        about: "Über Gntl Wallet",
+        about: "Über GNTL Wallet",
         changePassword: "Passwort ändern",
         copyAddress: "Adresse kopieren",
         copyQR: "QR Code kopieren",
@@ -244,7 +244,7 @@ export default {
         deleteWallet: "Wallet löschen",
         exportWallet: "Export Brieftasche",
         exportTransactions: "Transaktionen exportieren",
-        exit: "Gntl Wallet schließen",
+        exit: "GNTL Wallet schließen",
         importOldGUIWallet: "Wallets von alter GUI importieren",
         manageKeyImages: "Key Images verwalten",
         openWallet: "Wallet öffnen",
@@ -520,7 +520,7 @@ export default {
         versionDaemon: "Daemon-Version",
         versionWallet: "Wallet-Version",
         welcome: "Willkommen",
-        welcomeNoWallet: "Willkommen bei deiner Gntl Electron Wallet",
+        welcomeNoWallet: "Willkommen bei deiner GNTL Electron Wallet",
         yourWallets: "Deine Wallets"
     },
     headers: {

@@ -28,15 +28,24 @@ export class Backend {
 
     init () {
         // spawn(process.execPath, ['./go.js'], {stdio:'ignore'})
-        this.remotes = [{ host: "node.pool.gntl.co.uk", port: 16662 },
-            { host: "node.pool.gntl.co.uk", port: 16662 }]
+        this.remotes = [
+            { host: "uk1.gntl.cash", port: 16662 },
+            { host: "uk2.gntl.cash", port: 16662 },
+            { host: "eu1.gntl.cash", port: 16662 },
+            { host: "eu2.gntl.cash", port: 16662 },
+            { host: "eu3.gntl.cash", port: 16662 },
+            { host: "us1.gntl.cash", port: 16662 },
+            { host: "us2.gntl.cash", port: 16662 },
+            { host: "us3.gntl.cash", port: 16662 },
+            { host: "asia1.gntl.cash", port: 16662 }
+        ]
 
         if (os.platform() == "win32") {
-            this.config_dir = "C:\\ProgramData\\gntl"
-            this.wallet_dir = `${os.homedir()}\\Documents\\Gntl`
+            this.config_dir = "C:\\ProgramData\\GNTL"
+            this.wallet_dir = `${os.homedir()}\\Documents\\GNTL`
         } else {
             this.config_dir = path.join(os.homedir(), ".gntl")
-            this.wallet_dir = path.join(os.homedir(), "Gntl")
+            this.wallet_dir = path.join(os.homedir(), "GNTL")
         }
 
         if (!fs.existsSync(this.config_dir)) {
@@ -67,7 +76,7 @@ export class Backend {
         const daemons = {
             mainnet: {
                 ...daemon,
-                remote_host: "node.pool.gntl.co.uk",
+                remote_host: "uk1.gntl.cash",
                 remote_port: 16662
             },
             stagenet: {
@@ -109,7 +118,7 @@ export class Backend {
             },
             daemon: {
                 type: "local_remote",
-                remote_host: "node.pool.gntl.co.uk",
+                remote_host: "uk1.gntl.cash",
                 remote_port: 16662,
                 p2p_bind_ip: "0.0.0.0",
                 p2p_bind_port: 16661,
@@ -310,7 +319,7 @@ export class Backend {
             }
 
             if (path) {
-                const baseUrl = net_type === "testnet" ? "https://stageblocks.gntl.com" : "https://explorer.pool.gntl.co.uk"
+                const baseUrl = net_type === "testnet" ? "https://explorerstg.gntl.uk" : "https://explorer.gntl.uk"
                 const url = `${baseUrl}/${path}/`
                 require("electron").shell.openExternal(url + params.id)
             }

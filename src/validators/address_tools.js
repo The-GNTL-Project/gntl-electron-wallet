@@ -1948,7 +1948,7 @@ return{_strlen:lb,_ge_mul8:Va,_keccak:db,_ge_scalarmult:Ta,_ge_fromfe_frombytes_
 var gntlConfig = {
     coinUnitPlaces: 12,
     coinSymbol: 'GNTL',
-    coinName: 'Gntl',
+    coinName: 'GNTL Coin',
     coinUriPrefix: 'gntl:',
     addressPrefix: 0x17a76d
 };

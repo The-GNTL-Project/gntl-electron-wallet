@@ -208,8 +208,8 @@ module.exports = function (ctx) {
                 // https://www.electron.build/configuration/configuration
 
                 appId: "com.gntl.electron-wallet",
-                productName: "Gntl Electron Wallet",
-                copyright: "Copyright © 2018-2020 Gntl Project, 2018-2020 Ryo/Loki Currency Project",
+                productName: "GNTL Electron Wallet",
+                copyright: "Copyright © 2021-2022 The GNTL Project, 2018-2020 Ryo/Loki Currency Project",
                 afterSign: "build/notarize.js",
                 artifactName: "gntl-electron-wallet-${version}-${os}.${ext}",
 
