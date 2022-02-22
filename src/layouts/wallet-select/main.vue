@@ -13,7 +13,6 @@
 
         <q-toolbar-title v-if="page_title=='GNTL'">
             <div style="margin-top:7px">
-                <img src="statics/gntl.svg" height="32">
             </div>
         </q-toolbar-title>
         <q-toolbar-title v-else>
