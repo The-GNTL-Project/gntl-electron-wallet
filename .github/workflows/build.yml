@@ -23,6 +23,8 @@ jobs:
 
             - name: Download GNTL Binaries
               run: node ./build/download-binaries.js
+              env:
+                GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Extract GNTL Tar Binaries
               if: ${{runner.os == 'Linux' || runner.os == 'macOS'}}
