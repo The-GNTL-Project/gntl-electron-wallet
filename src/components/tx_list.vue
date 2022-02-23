@@ -20,7 +20,7 @@
                     </q-item-main>
                     <q-item-side>
                         <q-item-tile label>
-                            <FormatRyo :amount="tx.amount" raw-value />
+                            <FormatGntl :amount="tx.amount" raw-value />
                         </q-item-tile>
                         <q-item-tile sublabel>
                             <timeago :datetime="tx.timestamp*1000" :auto-update="60">
@@ -65,7 +65,7 @@ import { QSpinnerDots } from "quasar"
 import Identicon from "components/identicon"
 import TxTypeIcon from "components/tx_type_icon"
 import TxDetails from "components/tx_details"
-import FormatRyo from "components/format_ryo"
+import FormatGntl from "components/format_gntl"
 export default {
     name: "TxList",
     props: {
@@ -237,7 +237,7 @@ export default {
         Identicon,
         TxTypeIcon,
         TxDetails,
-        FormatRyo
+        FormatGntl
     }
 }
 </script>
