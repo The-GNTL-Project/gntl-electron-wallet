@@ -56,14 +56,11 @@ export class Market {
         try {
             let response = await this.rpc.callAPI({}, this.options.market.exchange)
             let data = []
-            for (let ticker of response.result.tickers) {
-                let key = ticker.market.name
-                let symbol = ticker.target // btc
+                let key = "Exbitron"
+                let symbol = "BTC"
                 let label = `${key} ${symbol}`
-                let price = +ticker.last
-                if (price === 0) continue
+                let price = +response.result.ticker.last
                 data.push({ key: label, label: label, symbol: symbol, value: price })
-            }
             this.sendGateway("set_market_data", { info: { exchanges: data } })
         } catch (error) {}
     }

@@ -114,10 +114,10 @@ export default {
         },
         exchange: {
             protocol: "https://",
-            hostname: "api.coingecko.com",
+            hostname: "www.exbitron.com",
             port: 443,
             coin: "gntl",
-            endpoint: "/api/v3/coins/gntl/tickers"
+            endpoint: "/api/v2/peatio/public/markets/gntlbtc/tickers"
         }
     }
 }
