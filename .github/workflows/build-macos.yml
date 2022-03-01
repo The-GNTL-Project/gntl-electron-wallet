@@ -1,4 +1,4 @@
-name: GNTL Electron Wallet Build
+name: GNTL Electron Wallet Build for macOS
 on: [push, pull_request]
 
 jobs:
@@ -7,10 +7,10 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-              os: [windows-2019, macos-11, ubuntu-20.04]
+              os: [macos-11]
 
         steps:
-            - name: Check-out Git Repo
+            - name: Check-out Repo
               uses: actions/checkout@v1
 
             - name: Install Node
@@ -21,24 +21,17 @@ jobs:
             - name: Install Dependencies
               run: npm install -f
 
-            - name: Download GNTL Binaries
+            - name: Download latest GNTL Release
               run: node ./build/download-binaries.js
               env:
                 GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: Extract GNTL Tar Binaries
-              if: ${{runner.os == 'Linux' || runner.os == 'macOS'}}
+            - name: Extract Binaries (Tar)
               run: tar -xf latest.gz
               shell: bash
               working-directory: ./downloads
 
-            - name: Extract GNTL 7z Binaries
-              if: runner.os == 'Windows'
-              run: 7z x latest.7z
-              shell: bash
-              working-directory: ./downloads
-
-            - name: Move GNTL Daemon and Wallet Binaries
+            - name: Move Daemon and Wallet Binaries
               run: |
                 find ./downloads -type f -name "gntld*" -exec cp '{}' ./bin \;
                 find ./downloads -type f -name "gntl-wallet-rpc*" -exec cp '{}' ./bin \;
@@ -48,14 +41,7 @@ jobs:
               run: ls ./bin
               shell: bash
 
-            - name: Publish Windows and Linux Binaries
-              if: runner.os != 'macOS'
-              run: npm run build
-              env:
-                GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-            - name: Publish mac Binaries
-              if: runner.os == 'macOS'
+            - name: Publish Binaries
               run: npm run build
               env:
                 GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
