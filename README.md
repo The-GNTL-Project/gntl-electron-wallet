@@ -15,25 +15,44 @@ Please submit any changes as pull requests to the development branch, all change
 
 ## Compile from Source
 ### Pre-requisites
-- Download latest [GNTL Release](https://github.com/the-gntl-project/gntl/releases/latest)
+#### GNTL Release binaries
+Grab the download link for the latest [GNTL Release](https://github.com/The-GNTL-Project/gntl/releases).
+
+We'll use **v1.0.2** as an example:
+```
+wget https://github.com/The-GNTL-Project/gntl/releases/download/v1.0.2/GNTL-Linux-x86_64-v1.0.2.tar.gz
+```
+
+Create **~/gntl/**, extract binaries, and remove the downloaded file:
+```
+mkdir ~/gntl/
+tar -xvf GNTL-Linux-x86_64-v1.0.2.tar.gz -C ~/gntl/
+rm GNTL-Linux-x86_64-v1.0.2.tar.gz
+```
+
+#### Install Node Version Manager
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
 
 ### Compile
 ```
-nvm use 12.20.2 ##install with nvm install 12.20.2)
+nvm use 12.20.2
 npm install -g quasar-cli
 git clone https://github.com/the-gntl-project/gntl-electron-wallet
 cd gntl-electron-wallet
-cp path_to_gntl_binaries/gntld bin/
-cp path_to_gntl_binaries/gntl-wallet-rpc bin/
+cp ~/gntl/gntld bin/
+cp ~/gntl/gntl-wallet-rpc bin/
 npm install --force
 ```
 
 #### Development
+**Note:** This will only run the wallet, for development purposes.
 ```
 npm run dev
 ```
 
-### Building
+### Build
 **Note:** This will only build the binaries for the system you run the command on.  Running this command on `linux` will only make `linux` binaries, no `mac` or `windows` binaries.
 ```
 npm run build
