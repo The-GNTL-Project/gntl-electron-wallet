@@ -217,7 +217,7 @@ export class Pool {
     }
 
     checkHeight () {
-        let url = "https://explorer.gntl.uk/api/networkinfo"
+        let url = "https://explorer.gntl.cash/api/networkinfo"
         if (this.testnet) {
             url = "https://explorerstg.gntl.uk/api/networkinfo"
         }

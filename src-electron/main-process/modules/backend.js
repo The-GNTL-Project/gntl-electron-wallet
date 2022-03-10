@@ -319,7 +319,7 @@ export class Backend {
             }
 
             if (path) {
-                const baseUrl = net_type === "testnet" ? "https://explorerstg.gntl.uk" : "https://explorer.gntl.uk"
+                const baseUrl = net_type === "testnet" ? "https://explorerstg.gntl.uk" : "https://explorer.gntl.cash"
                 const url = `${baseUrl}/${path}/`
                 require("electron").shell.openExternal(url + params.id)
             }
