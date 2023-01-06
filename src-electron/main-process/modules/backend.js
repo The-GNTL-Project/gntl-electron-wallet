@@ -29,15 +29,20 @@ export class Backend {
     init () {
         // spawn(process.execPath, ['./go.js'], {stdio:'ignore'})
         this.remotes = [
-            { host: "uk1.gntl.cash", port: 16662 },
-            { host: "uk2.gntl.cash", port: 16662 },
-            { host: "eu1.gntl.cash", port: 16662 },
-            { host: "eu2.gntl.cash", port: 16662 },
-            { host: "eu3.gntl.cash", port: 16662 },
-            { host: "us1.gntl.cash", port: 16662 },
-            { host: "us2.gntl.cash", port: 16662 },
-            { host: "us3.gntl.cash", port: 16662 },
-            { host: "asia1.gntl.cash", port: 16662 }
+            { host: "pool.gntl.cash", port: 16662 },
+            { host: "pool.gntl.uk", port: 16662 },
+            { host: "uk01-rn.gntl.cash", port: 16662 },
+            { host: "de01-rn.gntl.cash", port: 16662 },
+            { host: "de02-rn.gntl.cash", port: 16662 },
+            { host: "de03-rn.gntl.cash", port: 16662 },
+            { host: "de04-rn.gntl.cash", port: 16662 },
+            { host: "de05-rn.gntl.cash", port: 16662 },
+            { host: "us01-rn.gntl.cash", port: 16662 },
+            { host: "us02-rn.gntl.cash", port: 16662 },
+            { host: "us03-rn.gntl.cash", port: 16662 },
+            { host: "us04-rn.gntl.cash", port: 16662 },
+            { host: "us05-rn.gntl.cash", port: 16662 },
+            { host: "us06-rn.gntl.cash", port: 16662 }
         ]
 
         if (os.platform() == "win32") {
@@ -76,7 +81,7 @@ export class Backend {
         const daemons = {
             mainnet: {
                 ...daemon,
-                remote_host: "uk1.gntl.cash",
+                remote_host: "pool.gntl.cash",
                 remote_port: 16662
             },
             stagenet: {
@@ -118,7 +123,7 @@ export class Backend {
             },
             daemon: {
                 type: "local_remote",
-                remote_host: "uk1.gntl.cash",
+                remote_host: "pool.gntl.cash",
                 remote_port: 16662,
                 p2p_bind_ip: "0.0.0.0",
                 p2p_bind_port: 16661,
