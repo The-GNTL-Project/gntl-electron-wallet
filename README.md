@@ -1,7 +1,7 @@
 # GNTL Electron (GUI) Wallet
 <img src="https://github.com/The-GNTL-Project/Images/raw/master/GNTL_Icon_Round_200x200.png" alt="GNTL Coin">
 
-Copyright (c) 2021-2022 The GNTL Project    
+Copyright (c) 2021-2023 The GNTL Project    
 Copyright (c) 2018-2021, The Arqma Network   
 
 ## Introduction
