@@ -142,7 +142,7 @@ export default {
         },
         transfer: {
             title: "Transfert",
-            message: "Voulez-vous envoyer la transaction ?",
+            message: "Voulez-vous envoyer la transaction, entrez le mot de passe ?",
             ok: "ENVOYER"
         },
         unlockConfirm: {

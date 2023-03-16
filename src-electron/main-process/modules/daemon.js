@@ -46,7 +46,7 @@ export class Daemon {
     async checkRemoteHeight () {
         let options = {
             protocol: "https://",
-            hostname: "explorer.gntl.uk",
+            hostname: "explorer.gntl.cash",
             endpoint: "/api/networkinfo"
         }
         if (this.testnet) {

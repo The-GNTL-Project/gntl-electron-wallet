@@ -1,7 +1,7 @@
 {
   "name": "gntl-electron-wallet",
-  "version": "1.0.1",
-  "daemonVersion": "1.0.2",
+  "version": "1.0.2",
+  "daemonVersion": "1.0.5",
   "description": "Modern GUI interface for GNTL Coin",
   "productName": "GNTL Electron Wallet",
   "repository": {
@@ -48,7 +48,7 @@
     "qrcode.vue": "^1.7.0",
     "rotating-file-stream": "^1.4.1",
     "rxjs": "^6.6.7",
-    "ryo-core-js": "git://github.com/The-GNTL-Project/ryo-core-js.git",
+    "ryo-core-js": "git+https://github.com/The-GNTL-Project/ryo-core-js.git",
     "urllib": "^2.37.1",
     "utf-8-validate": "^5.0.5",
     "validation": "0.0.1",

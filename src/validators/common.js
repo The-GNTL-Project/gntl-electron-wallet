@@ -23,7 +23,7 @@ export const address = (input) => {
             if (/^[0-9A-Za-z]+$/.test(input)) {
                 switch(input.substring(0,4)) {
                     case "gnti":
-                        resolve(input.length === 110)
+                        resolve(input.length === 109)
                         break
                     case "gnt1":
                         resolve(input.length === 98)
