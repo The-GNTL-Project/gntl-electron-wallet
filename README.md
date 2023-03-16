@@ -16,18 +16,18 @@ Please submit any changes as pull requests to the development branch, all change
 ## Compile from Source
 ### Pre-requisites
 #### GNTL Release binaries
-Grab the download link for the latest [GNTL Release](https://github.com/The-GNTL-Project/gntl/releases).
+Grab the download link for the latest [GNTL Release](https://gntl.cash/pages/downloads.html).
 
-We'll use **v1.0.2** as an example:
+We'll use **v1.0.5** as an example:
 ```
-wget https://github.com/The-GNTL-Project/gntl/releases/download/v1.0.2/GNTL-Linux-x86_64-v1.0.2.tar.gz
+wget https://gntl.cash/downloads/GNTL-Linux-x86_64-Ubuntu-2004-v1.0.5.tar.gz
 ```
 
 Create **~/gntl/**, extract binaries, and remove the downloaded file:
 ```
 mkdir ~/gntl/
-tar -xvf GNTL-Linux-x86_64-v1.0.2.tar.gz -C ~/gntl/
-rm GNTL-Linux-x86_64-v1.0.2.tar.gz
+tar -xvf GNTL-Linux-x86_64-Ubuntu-2004-v1.0.5.tar.gz -C ~/gntl/
+rm GNTL-Linux-x86_64-Ubuntu-2004-v1.0.5.tar.gz
 ```
 
 #### Install Node Version Manager
