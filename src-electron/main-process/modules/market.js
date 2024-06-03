@@ -20,7 +20,7 @@ export class Market {
 
         // this.agent = new https.Agent({ keepAlive: true, maxSockets: 1 })
         this.options = null
-        this.endpoint = "/api/v3/coins/gntl/tickers"
+        this.endpoint = "/api/v2/market/getbysymbol/GNTL_BTC"
         this.rpc = new RPC()
     }
 
@@ -56,10 +56,10 @@ export class Market {
         try {
             let response = await this.rpc.callAPI({}, this.options.market.exchange)
             let data = []
-                let key = "Exbitron"
+                let key = "Xeggex"
                 let symbol = "BTC"
                 let label = `${key} ${symbol}`
-                let price = +response.result.ticker.last
+                let price = +response.result.lastPrice
                 data.push({ key: label, label: label, symbol: symbol, value: price })
             this.sendGateway("set_market_data", { info: { exchanges: data } })
         } catch (error) {}

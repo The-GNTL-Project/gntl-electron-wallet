@@ -21,9 +21,9 @@ async function download () {
                 if (platform === "linux") {
                     return url.includes("Linux-x86_64")
                 } else if (platform === "win32") {
-                    return url.includes("Windows-x64")
+                    return url.includes("Windows-x86_64")
                 }
-                return url.includes("macOS")
+                return url.includes("macOS-x86_64")
             })
 
         if (!url) { throw new Error("Download URL not found for " + process) }

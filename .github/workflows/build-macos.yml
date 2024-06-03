@@ -1,5 +1,12 @@
 name: GNTL Electron Wallet Build for macOS
-on: [push, pull_request]
+
+on:
+  push:
+    paths-ignore:
+      - '**/README.md'
+  pull_request:
+    paths-ignore:
+      - '**/README.md'
 
 jobs:
     build:
@@ -11,10 +18,10 @@ jobs:
 
         steps:
             - name: Check-out Repo
-              uses: actions/checkout@v1
+              uses: actions/checkout@v4
 
             - name: Install Node
-              uses: actions/setup-node@v1
+              uses: actions/setup-node@v4
               with:
                 node-version: "12.20.2"
 
@@ -57,7 +64,7 @@ jobs:
               working-directory: ./dist/electron-mat/Packaged
               
             - name: Upload Artifacts
-              uses: actions/upload-artifact@v1
+              uses: actions/upload-artifact@v4
               with:
                 name: ${{ runner.OS }}
                 path: dist/electron-mat/Packaged

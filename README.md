@@ -1,7 +1,7 @@
 # GNTL Electron (GUI) Wallet
 <img src="https://github.com/The-GNTL-Project/Images/raw/master/GNTL_Icon_Round_200x200.png" alt="GNTL Coin">
 
-Copyright (c) 2021-2023 The GNTL Project    
+Copyright (c) 2021-2024 The GNTL Project    
 Copyright (c) 2018-2021, The Arqma Network   
 
 ## Introduction
@@ -13,7 +13,58 @@ This is the new Electron GUI for GNTL.  It is open source and completely free to
 
 Please submit any changes as pull requests to the development branch, all changes are assessed in the development branch before being merged to master, release tags are considered stable builds for the GUI.
 
-## Compile from Source
+## Compile from Source (Windows)
+### Pre-requisites
+#### GNTL Release binaries
+Grab the download link for the latest [GNTL Release](https://gntl.cash/pages/downloads.html).
+
+We'll use **v1.0.5** as an example:
+* Download https://gntl.cash/downloads/GNTL-Windows-x64-v1.0.5.7z
+* Extract **gntld.exe** and **gntl-wallet-rpc.exe** to **C:\GNTL**, and then delete the downloaded file
+
+#### Install Node Version Manager
+This is the version that has been tested, later versions may work.  Install it using the default options.
+* https://github.com/coreybutler/nvm-windows/releases/download/1.1.12/nvm-setup.exe
+
+#### Install Git
+This is the version that has been tested, later versions may work.  Install it using the default options.
+* https://github.com/git-for-windows/git/releases/download/v2.45.1.windows.1/Git-2.45.1-64-bit.exe
+
+### Compile
+* Launch PowerShell as Administrator, and run the following:
+```
+nvm install 12.20.2
+nvm use 12.20.2
+npm install -g windows-build-tools
+* This will take some times, due to the size of Visual Studio Build Tools.
+* Installation may never show complete, but once you see Visual Studio Build Tools 2017 appear in Programs and Features:
+* do a CTRL-C in PowerShell to terminate the install script. 
+
+$env:PYTHON = "$env.USERPROFILE\.windows-build-tools\python27\python.exe"
+npm config set python "$env.USERPROFILE\.windows-build-tools\python27\python.exe"
+npm config set msvs_version 2017
+
+npm install -g quasar-cli
+cd\
+git clone https://github.com/The-GNTL-Project/gntl-electron-wallet
+cd gntl-electron-wallet
+copy \GNTL\*.* bin
+
+npm install -f
+```
+
+#### Development
+**Note:** This will only run the wallet, for development purposes.
+```
+npm run dev
+```
+
+### Build
+```
+npm run build
+```
+
+## Compile from Source (Linux)
 ### Pre-requisites
 #### GNTL Release binaries
 Grab the download link for the latest [GNTL Release](https://gntl.cash/pages/downloads.html).
@@ -37,13 +88,14 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 ### Compile
 ```
+nvm install 12.20.2
 nvm use 12.20.2
 npm install -g quasar-cli
-git clone https://github.com/the-gntl-project/gntl-electron-wallet
+git clone https://github.com/The-GNTL-Project/gntl-electron-wallet
 cd gntl-electron-wallet
 cp ~/gntl/gntld bin/
 cp ~/gntl/gntl-wallet-rpc bin/
-npm install --force
+npm install -f
 ```
 
 #### Development
@@ -53,12 +105,11 @@ npm run dev
 ```
 
 ### Build
-**Note:** This will only build the binaries for the system you run the command on.  Running this command on `linux` will only make `linux` binaries, no `mac` or `windows` binaries.
 ```
 npm run build
 ```
 
-### Adding language support
+## Adding language support
 Adding a new language is fairly simple.
 
 1. Duplicate the language file `src/i18n/en-us.js` and rename it to the relevant language code.

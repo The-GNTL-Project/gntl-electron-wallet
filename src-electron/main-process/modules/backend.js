@@ -176,10 +176,10 @@ export class Backend {
                 },
                 exchange: {
                     protocol: "https://",
-                    hostname: "www.exbitron.com",
+                    hostname: "api.xeggex.com",
                     port: 443,
                     coin: "gntl",
-                    endpoint: "/api/v2/peatio/public/markets/gntlbtc/tickers"
+                    endpoint: "/api/v2/market/getbysymbol/GNTL_BTC"
                 }
             },
 
