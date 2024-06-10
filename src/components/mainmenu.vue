@@ -41,7 +41,7 @@
 
             <p class="q-my-sm">{{ $t("titles.versionWallet") }}: v{{ version }}</p>
             <p class="q-my-sm">{{ $t("titles.versionDaemon") }}: v{{ daemonVersion }}</p>
-            <p class="q-my-sm">Copyright (c) 2021-2023, The GNTL Project</p>
+            <p class="q-my-sm">Copyright (c) 2021-2024, The GNTL Project</p>
             <p class="q-my-sm">Copyright (c) 2018-2021, ArQmA Project</p>
             <p class="q-my-sm">Copyright (c) 2018-2020, Ryo Currency Project</p>
             <p class="q-my-sm">All rights reserved.</p>

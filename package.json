@@ -1,7 +1,7 @@
 {
   "name": "gntl-electron-wallet",
-  "version": "1.0.2",
-  "daemonVersion": "1.0.5",
+  "version": "1.0.3",
+  "daemonVersion": "1.0.6",
   "description": "Modern GUI interface for GNTL Coin",
   "productName": "GNTL Electron Wallet",
   "repository": {
