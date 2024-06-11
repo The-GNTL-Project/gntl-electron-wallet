@@ -18,8 +18,8 @@ Please submit any changes as pull requests to the development branch, all change
 #### GNTL Release binaries
 Grab the download link for the latest [GNTL Release](https://gntl.cash/pages/downloads.html).
 
-We'll use **v1.0.5** as an example:
-* Download https://gntl.cash/downloads/GNTL-Windows-x64-v1.0.5.7z
+We'll use **v1.0.6** as an example:
+* Download https://gntl.cash/downloads/GNTL-Windows-x86_64-v1.0.6.7z
 * Extract **gntld.exe** and **gntl-wallet-rpc.exe** to **C:\GNTL**, and then delete the downloaded file
 
 #### Install Node Version Manager
