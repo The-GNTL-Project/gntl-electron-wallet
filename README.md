@@ -40,8 +40,8 @@ npm install -g windows-build-tools
 * Installation may never show complete, but once you see Visual Studio Build Tools 2017 appear in Programs and Features:
 * do a CTRL-C in PowerShell to terminate the install script. 
 
-$env:PYTHON = "$env.USERPROFILE\.windows-build-tools\python27\python.exe"
-npm config set python "$env.USERPROFILE\.windows-build-tools\python27\python.exe"
+$env:PYTHON = "$env:USERPROFILE\.windows-build-tools\python27\python.exe"
+npm config set python "$env:USERPROFILE\.windows-build-tools\python27\python.exe"
 npm config set msvs_version 2017
 
 npm install -g quasar-cli
